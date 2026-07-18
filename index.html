@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alpha Capital Gateway | Secure Terminal Portal</title>
+    <!-- Matching your dashboard's Tailwind v4 engine -->
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <style>
+        /* Precision override to eliminate any ghost scrollbars on the host window */
+        html, body {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            overflow: hidden;
+            background-color: #030712;
+        }
+    </style>
+</head>
+<body class="bg-[#030712] text-gray-100 antialiased flex flex-col h-screen w-screen">
+
+    <!-- The Precision Masking Container -->
+    <div class="w-full flex-1 overflow-hidden relative bg-[#030712]">
+        
+        <!-- 
+          THE MASKING ENGINE:
+          - The iframe is shifted upward by 55px to push the Google banner out of the viewport.
+          - The height is compensated by adding 55px to prevent the bottom layout from clipping.
+        -->
+        <iframe 
+            src="https://script.google.com/macros/s/AKfycby34YxSiYxCe2nbQ6oYlbj5_eu4uyhTuPOj19QeTW29e5COqt0WXjeRyZhzkHwbMDorug/exec" 
+            title="Alpha Capital Execution Terminal"
+            class="w-full h-[calc(100%+55px)] -mt-[55px] border-none absolute top-0 left-0"
+            allow="autoplay; clipboard-read; clipboard-write">
+        </iframe>
+        
+    </div>
+
+</body>
+</html>
