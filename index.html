@@ -13,16 +13,15 @@
 
     <!-- App Icons -->
     <link rel="icon" type="image/png" href="https://github.com/akshaymorey30081994-crypto/Terminal/blob/main/icon.png">
-    <link rel="shortcut icon" type="image/png" href="https://github.com/akshaymorey30081994-crypto/Terminal/blob/main/icon.png">
     <link rel="apple-touch-icon" href="https://github.com/akshaymorey30081994-crypto/Terminal/blob/main/icon.png">
 
-    <!-- Matching your dashboard's Tailwind v4 engine -->
+    <!-- Tailwind v4 Engine -->
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <style>
-        /* Precision override to eliminate any ghost scrollbars on the host window */
         html, body {
             margin: 0;
             padding: 0;
+            width: 100%;
             height: 100%;
             overflow: hidden;
             background-color: #030712;
@@ -30,23 +29,15 @@
         }
     </style>
 </head>
-<body class="bg-[#030712] text-gray-100 antialiased flex flex-col h-screen w-screen">
+<body class="bg-[#030712] text-gray-100 antialiased flex flex-col h-full w-full">
 
-    <!-- The Precision Masking Container -->
-    <div class="w-full flex-1 overflow-hidden relative bg-[#030712]">
-        
-        <!-- 
-          THE MASKING ENGINE:
-          - The iframe is shifted upward by 55px to push the Google banner out of the viewport.
-          - The height is compensated by adding 55px to prevent the bottom layout from clipping.
-        -->
+    <div class="w-full h-full relative bg-[#030712] overflow-hidden">
         <iframe 
             src="https://script.google.com/macros/s/AKfycby34YxSiYxCe2nbQ6oYlbj5_eu4uyhTuPOj19QeTW29e5COqt0WXjeRyZhzkHwbMDorug/exec" 
             title="Alpha Capital Execution Terminal"
-            class="w-full h-[calc(100%+55px)] -mt-[55px] border-none absolute top-0 left-0"
+            class="w-full h-full border-none absolute inset-0"
             allow="autoplay; clipboard-read; clipboard-write">
-        </iframe>
-        
+        ></iframe>
     </div>
 
 </body>
