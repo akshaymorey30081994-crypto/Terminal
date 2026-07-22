@@ -42,8 +42,11 @@
 </head>
 <body class="bg-[#030712] text-gray-100 antialiased w-full h-full">
 
-    <!-- Added transform translate-y-[10vh] and h-[90vh] to shift down without cutting off content -->
-    <main class="w-full h-[90vh] translate-y-[10vh] relative overflow-hidden bg-[#030712]">
+    <!-- 
+      - Default (Mobile): translate-y-[10vh] h-[90vh] (shifted 10vh down)
+      - Desktop (md: and up): md:translate-y-0 md:h-full (reset back to 100% height without shift)
+    -->
+    <main class="w-full h-[90vh] translate-y-[10vh] md:h-full md:translate-y-0 relative overflow-hidden bg-[#030712]">
         <iframe 
             src="https://script.google.com/macros/s/AKfycby34YxSiYxCe2nbQ6oYlbj5_eu4uyhTuPOj19QeTW29e5COqt0WXjeRyZhzkHwbMDorug/exec" 
             title="Alpha Capital Execution Terminal"
